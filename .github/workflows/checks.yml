@@ -14,8 +14,8 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USER }}
           password: ${{ secrets.DOCKERHUB_TOCKEN }}
-      - name: Checkouts
-        uses: actions/checkouts@v2
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Test
         run: docker-compose run --rm app sh -c "python manage.py test"
       - name: Lint
