@@ -1,6 +1,4 @@
-"""
-Tests for models.
-"""
+"""Tests for models."""
 from django.test import TestCase
 from django.contrib.auth import get_user_model
 
@@ -19,8 +17,7 @@ class ModelTest(TestCase):
 
         self.assertEqual(user.email, email)
         self.assertTrue(user.check_password(password))
-    
-    
+
     def test_new_user_email_normalized(self):
         """Test the is normalized for new users."""
         sample_emails = [
@@ -38,8 +35,7 @@ class ModelTest(TestCase):
     #     """Test that creating a user with an email raises a ValueError."""
     #     with self.assertRaises('ValueError'):
     #         get_user_model().objects.create_user('','test123')
-    
-    
+
     def test_create_new_superuser(self):
         """Test creating a new superuser"""
         user = get_user_model().objects.create_superuser(
