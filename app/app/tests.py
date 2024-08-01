@@ -1,6 +1,4 @@
-"""
-sample tests
-"""
+"""sample tests"""
 
 from django.test import SimpleTestCase
 from app import calc
@@ -14,4 +12,3 @@ class CalcTests(SimpleTestCase):
         res = calc.add(6, 7)
 
         self.assertEqual(res, 13)
-        
