@@ -6,7 +6,6 @@ from django.contrib.auth.models import (
 )
 
 
-
 class UserManager(BaseUserManager):
     "Manage for users."
 
@@ -25,7 +24,6 @@ class UserManager(BaseUserManager):
         user.is_staff = True
         user.is_superuser = True
         user.save(using=self._db)
-
         return user
 
 
@@ -39,4 +37,3 @@ class User(AbstractBaseUser, PermissionsMixin):
     objects = UserManager()
 
     USERNAME_FIELD = 'email'
-    
